@@ -1,0 +1,45 @@
+import React, { useState} from "react";
+
+type AccordionType = {
+    titleValue: string
+}
+
+export const UnControlledAccordion = (props:AccordionType) => {
+const [collapsed , setCollapsed] = useState<boolean>(true)
+    const accordionHandler = () => {
+        collapsed ? setCollapsed(false) : setCollapsed(true)
+    }
+    return (<div >
+        <AccordionTitle title={props.titleValue}/> <button onClick={accordionHandler}>TOGGLE</button>
+        { collapsed &&  <AccordionBody/>}
+    </div>)
+
+}
+
+type AccordionTitleType ={
+    title: string
+}
+export const AccordionTitle = (props:AccordionTitleType) => {
+
+    return (<div>
+        <h3>{props.title}</h3>
+    </div>)
+
+}
+
+type AccordionBody ={
+}
+export const AccordionBody = (props:AccordionBody) => {
+
+    return (<div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>)
+
+}
+
+
+
