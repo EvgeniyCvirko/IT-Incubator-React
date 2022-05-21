@@ -8,10 +8,12 @@ export function App() {
 
     return (
         <div className = 'App'>
-            <Rating value={4} />
             <Rating value={1} />
             <Rating value={2} />
-            <Accordion  titleValue="Меню" collapsed={true}/>
+            <Rating value={3} />
+            <Rating value={4} />
+            <Rating value={5} />
+            <Accordion  titleValue="Меню" collapsed={false}/>
             <Accordion  titleValue="Друзья" collapsed={true}/>
         </div>
     );
