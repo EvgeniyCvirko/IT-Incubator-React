@@ -11,7 +11,8 @@ export function App() {
             <Rating value={4} />
             <Rating value={1} />
             <Rating value={2} />
-            <Accordion />
+            <Accordion  titleValue="Меню" collapsed={true}/>
+            <Accordion  titleValue="Друзья" collapsed={true}/>
         </div>
     );
 }
