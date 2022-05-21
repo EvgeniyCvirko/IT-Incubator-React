@@ -1,19 +1,18 @@
-import React  from "react";
+import React, { useState} from "react";
 
-export type OnOffType = {
-    status: boolean
-    callback: (value: boolean) => void
+type UncontrolledOnOffType = {
+    callback:(value: boolean) => void
 }
 
-export const OnOff = (props:OnOffType) => {
-
+export const UnControlledOnOff = (props:UncontrolledOnOffType) => {
+    let [on, SetOn] = useState<boolean>(false)
     const onStyle = {
         width: "30px",
         height: "20px",
         border: "1px solid black",
         display: "inline-block",
         padding: "2px",
-        backgroundColor:props.status ? "green" : "white"
+        backgroundColor: on ? "green" : "white"
     }
     const offStyle = {
         width: "30px",
@@ -22,7 +21,7 @@ export const OnOff = (props:OnOffType) => {
         display: "inline-block",
         marginLeft: "2px",
         padding: "2px",
-        backgroundColor:props.status ? "white" : "red"
+        backgroundColor: on ? "white" : "red"
     }
     const indicatorStyle = {
         width: "30px",
@@ -31,13 +30,15 @@ export const OnOff = (props:OnOffType) => {
         border: "1px solid black",
         display: "inline-block",
         marginLeft: "5px",
-        backgroundColor: props.status ? "green" : "red"
+        backgroundColor: on ? "green" : "red"
     }
 
     const onHandler = () =>{
+       SetOn(true)
         props.callback(true)
     }
     const offHandler = () =>{
+       SetOn(false)
         props.callback(false)
     }
 
