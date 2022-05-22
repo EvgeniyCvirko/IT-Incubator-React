@@ -6,6 +6,7 @@ import {OnOff} from "./components/OnOff/OnOff";
 import {UnControlledAccordion} from "./components/Accardion/UnControlledAccordion";
 import {UnControlledRating} from "./components/Rating/UnControlledReting";
 import {UnControlledOnOff} from "./components/OnOff/UnControlledOnOff";
+import {UnControlledInput} from "./components/UncontrolledInput/UncontrolledInput";
 
 
 export function App() {
@@ -16,11 +17,12 @@ export function App() {
     return (
         <div className = 'App'>
             {/*<Rating value={ratingValue} callBack={setRatingValue}/>*/}
+            <UnControlledRating/>
             <Accordion  titleValue="Меню" collapsed={collapsed} callBack={setCollapsed}/>
-            {/*<UnControlledRating/>*/}
-            <UnControlledAccordion  titleValue="Меню" />
-            {/*<OnOff status={switchOn} callback={SetSwitchOn}/>*/}
-            <UnControlledOnOff callback={SetSwitchOn}/>{switchOn.toString()}
+            {/*<UnControlledAccordion  titleValue="Меню" />*/}
+            <OnOff status={switchOn} callback={SetSwitchOn}/>
+           {/* <UnControlledOnOff callback={SetSwitchOn}/>*/}{switchOn.toString()}
+            <UnControlledInput />
         </div>
     );
 }
