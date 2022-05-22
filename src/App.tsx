@@ -23,15 +23,15 @@ export function App() {
     return (
         <div className = 'App'>
             {/*<Rating value={ratingValue} callBack={setRatingValue}/>*/}
-            <UnControlledRating/>
-            <Accordion  titleValue="Меню" collapsed={collapsed} callBack={setCollapsed}/>
+            {/*<UnControlledRating/>*/}
+            <Accordion  titleValue="User" collapsed={collapsed} callBack={setCollapsed}/>
             {/*<UnControlledAccordion  titleValue="Меню" />*/}
-            <OnOff status={switchOn} callback={SetSwitchOn}/>
-           {/* <UnControlledOnOff callback={SetSwitchOn}/>*/}{switchOn.toString()}
+            {/*<OnOff status={switchOn} callback={SetSwitchOn}/>{switchOn.toString()}*/}
+            {/*<UnControlledOnOff callback={SetSwitchOn}/>{switchOn.toString()}*/}
            {/* <UnControlledInput />*/}
-            <ControlledInput value={valueInput} callback={setValueInput}/>
-            <ControlledCheckbox value={valueCheckbox} callback={setValueCheckbox} />
-            <ControlledSelect value={valueSelect} callback={setValueSelect}/>
+           {/* <ControlledInput value={valueInput} callback={setValueInput}/>*/}
+           {/* <ControlledCheckbox value={valueCheckbox} callback={setValueCheckbox} />*/}
+           {/* <ControlledSelect value={valueSelect} callback={setValueSelect}/>*/}
         </div>
     );
 }

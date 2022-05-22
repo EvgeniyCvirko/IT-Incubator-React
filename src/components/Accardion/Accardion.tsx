@@ -5,14 +5,18 @@ type AccordionType = {
     collapsed: boolean
     callBack: (value: boolean) => void
 }
+let items = ['Eugeniy', 'Sasha', 'Dima', 'Anton', 'Igor']
 
 export const Accordion = (props: AccordionType) => {
     const accordionHandler = () => {
         props.collapsed ? props.callBack(false): props.callBack(true)
     }
+    const callbackHandler = (name: string) => {
+        alert(`"be Happy ${name} "`)
+    }
     return (<div>
         <AccordionTitle title={props.titleValue} callBack={accordionHandler }/>
-        {props.collapsed && <AccordionBody/>}
+        {props.collapsed && <AccordionBody items={items} callback={callbackHandler}/>}
     </div>)
 
 }
@@ -29,16 +33,17 @@ export const AccordionTitle = (props: AccordionTitleType) => {
 
 }
 
-type AccordionBody = {}
+type AccordionBody = {
+    items: string[]
+    callback: (name: string) => void
+}
 export const AccordionBody = (props: AccordionBody) => {
 
-    return (<div>
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-        </ul>
-    </div>)
+    return (<ul>
+        {props.items.map( (el, i) => {
+            return <li key={i} onClick={() =>{props.callback(el)}} >{el}</li>
+        })}
+    </ul>)
 
 }
 
