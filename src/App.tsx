@@ -10,6 +10,7 @@ import {UnControlledInput} from "./components/Input/UncontrolledInput";
 import {ControlledInput} from "./components/Input/Input";
 import {ControlledCheckbox} from "./components/Checkbox/ControlledCheckbox";
 import {ControlledSelect} from "./components/Select/ControlledSelect";
+import {MySelect} from "./components/Select/MySelect";
 
 
 export function App() {
@@ -32,6 +33,7 @@ export function App() {
            {/* <ControlledInput value={valueInput} callback={setValueInput}/>*/}
            {/* <ControlledCheckbox value={valueCheckbox} callback={setValueCheckbox} />*/}
            {/* <ControlledSelect value={valueSelect} callback={setValueSelect}/>*/}
+            <MySelect />
         </div>
     );
 }
