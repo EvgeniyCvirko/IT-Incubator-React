@@ -11,6 +11,7 @@ import {ControlledInput} from "./components/Input/Input";
 import {ControlledCheckbox} from "./components/Checkbox/ControlledCheckbox";
 import {ControlledSelect} from "./components/Select/ControlledSelect";
 import {MySelect} from "./components/Select/MySelect";
+import {Example1} from "./components/UseMemo/UseMemo";
 
 
 export function App() {
@@ -25,7 +26,7 @@ export function App() {
         <div className = 'App'>
             {/*<Rating value={ratingValue} callBack={setRatingValue}/>*/}
             {/*<UnControlledRating/>*/}
-            <Accordion  titleValue="User" collapsed={collapsed} callBack={setCollapsed}/>
+            {/*<Accordion  titleValue="User" collapsed={collapsed} callBack={setCollapsed}/>*/}
             {/*<UnControlledAccordion  titleValue="Меню" />*/}
             {/*<OnOff status={switchOn} callback={SetSwitchOn}/>{switchOn.toString()}*/}
             {/*<UnControlledOnOff callback={SetSwitchOn}/>{switchOn.toString()}*/}
@@ -33,7 +34,8 @@ export function App() {
            {/* <ControlledInput value={valueInput} callback={setValueInput}/>*/}
            {/* <ControlledCheckbox value={valueCheckbox} callback={setValueCheckbox} />*/}
            {/* <ControlledSelect value={valueSelect} callback={setValueSelect}/>*/}
-            <MySelect />
+           {/* <MySelect />*/}
+            <Example1 />
         </div>
     );
 }
