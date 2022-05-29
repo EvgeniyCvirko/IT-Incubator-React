@@ -11,7 +11,8 @@ import {ControlledInput} from "./components/Input/Input";
 import {ControlledCheckbox} from "./components/Checkbox/ControlledCheckbox";
 import {ControlledSelect} from "./components/Select/ControlledSelect";
 import {MySelect} from "./components/Select/MySelect";
-import {Example1} from "./components/UseMemo/UseMemo";
+import {UseMemo} from "./components/UseMemo/UseMemo";
+import {ReactMemo} from "./components/UseMemo/ReactMemo";
 
 
 export function App() {
@@ -35,7 +36,8 @@ export function App() {
            {/* <ControlledCheckbox value={valueCheckbox} callback={setValueCheckbox} />*/}
            {/* <ControlledSelect value={valueSelect} callback={setValueSelect}/>*/}
            {/* <MySelect />*/}
-            <Example1 />
+            <ReactMemo />
+            <UseMemo />
         </div>
     );
 }
