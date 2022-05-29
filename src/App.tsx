@@ -13,6 +13,7 @@ import {ControlledSelect} from "./components/Select/ControlledSelect";
 import {MySelect} from "./components/Select/MySelect";
 import { UseMemoHelpToReactMemo} from "./components/UseMemo/UseMemo";
 import {ReactMemo} from "./components/UseMemo/ReactMemo";
+import {BookCallBack} from "./components/UseMemo/UseCallback";
 
 
 export function App() {
@@ -37,7 +38,8 @@ export function App() {
            {/* <ControlledSelect value={valueSelect} callback={setValueSelect}/>*/}
            {/* <MySelect />*/}
            {/* <ReactMemo />*/}
-            <UseMemoHelpToReactMemo />
+           {/* <UseMemoHelpToReactMemo />*/}
+            <BookCallBack />
         </div>
     );
 }

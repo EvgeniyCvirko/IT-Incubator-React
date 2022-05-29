@@ -47,6 +47,7 @@ export const UseMemoHelpToReactMemo = () => {
     console.log('Example')
     const [counter, setCounter] = useState(0)
     const [users, setUsers] = useState(['Sasha', 'Dima', 'Igor'])
+
     const newArray = useMemo(() => {
        const newArray =  users.filter(u=> u.toLowerCase().indexOf('a') > -1);
         return newArray
