@@ -5,7 +5,8 @@ export type ControlledInputType = {
     callback: (value: boolean) => void
 }
 
-export const ControlledCheckbox = (props: ControlledInputType) => {
+export const ControlledCheckboxMemo = (props: ControlledInputType) => {
+    console.log('Checkbox')
     const onChangeHandler = (e:ChangeEvent<HTMLInputElement>) =>{
         props.callback(e.currentTarget.checked)
     }

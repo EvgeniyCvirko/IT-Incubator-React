@@ -8,7 +8,7 @@ import {UnControlledRating} from "./components/Rating/UnControlledReting";
 import {OnOffMemo} from "./components/OnOff/UnControlledOnOff";
 import {UnControlledInput} from "./components/Input/UncontrolledInput";
 import {ControlledInput} from "./components/Input/Input";
-import {ControlledCheckbox} from "./components/Checkbox/ControlledCheckbox";
+import {ControlledCheckboxMemo} from "./components/Checkbox/ControlledCheckbox";
 import {ControlledSelect} from "./components/Select/ControlledSelect";
 import {MySelect} from "./components/Select/MySelect";
 import { UseMemoHelpToReactMemo} from "./components/UseMemo/UseMemo";
@@ -28,13 +28,13 @@ export function App() {
         <div className = 'App'>
             {/*<Rating value={ratingValue} callBack={setRatingValue}/>*/}
             {/*<UnControlledRating/>*/}
-            <Accordion  titleValue="User" collapsed={collapsed} callBack={setCollapsed}/>
-            <UnControlledAccordion  titleValue="Меню" />
-            {/*<OnOff status={switchOn} callback={SetSwitchOn}/>{switchOn.toString()}*/}
+            {/*<Accordion  titleValue="User" collapsed={collapsed} callBack={setCollapsed}/>*/}
+            {/*<UnControlledAccordion  titleValue="Меню" />*/}
+            <OnOff status={switchOn} callback={SetSwitchOn}/>{switchOn.toString()}
             {/*<UnControlledOnOff />{switchOn.toString()}*/}
            {/* <UnControlledInput />*/}
            {/* <ControlledInput value={valueInput} callback={setValueInput}/>*/}
-           {/* <ControlledCheckbox value={valueCheckbox} callback={setValueCheckbox} />*/}
+            <ControlledCheckbox value={valueCheckbox} callback={setValueCheckbox} />
            {/* <ControlledSelect value={valueSelect} callback={setValueSelect}/>*/}
            {/* <MySelect />*/}
            {/* <ReactMemo />*/}
@@ -46,3 +46,4 @@ export function App() {
 
  const UnControlledOnOff = React.memo(OnOffMemo)
  const UnControlledAccordion = React.memo(UnControlledAccordionMemo)
+ const ControlledCheckbox = React.memo(ControlledCheckboxMemo)
