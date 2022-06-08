@@ -6,6 +6,7 @@ export type ControlledCheckboxType = {
 }
 
 export const ControlledInput = (props: ControlledCheckboxType) => {
+    console.log('Control Input')
     const onChangeHandler = (e:ChangeEvent<HTMLInputElement>) =>{
         props.callback(e.currentTarget.value)
     }
