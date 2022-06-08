@@ -1,6 +1,9 @@
 import React, {useState} from "react";
+import {ReactMemo} from "../UseMemo/ReactMemo";
 
 type RatingType = {}
+
+
 
 export const UnControlledRating = (props: RatingType) => {
      const [value, setValue] = useState(0)
@@ -21,8 +24,8 @@ type StarProps = {
     value: number
 }
 
-
-const Star = (props: StarProps) => {
+const memoStar = (props: StarProps) => {
+    console.log('memostar')
     return <span onClick={()=> props.callBack(props.value)}>{props.selected ? <b> star </b> :  " star "}</span>
 }
-
+const Star = React.memo(memoStar)

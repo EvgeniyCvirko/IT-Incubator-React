@@ -27,7 +27,7 @@ export function App() {
     return (
         <div className = 'App'>
             {/*<Rating value={ratingValue} callBack={setRatingValue}/>*/}
-            {/*<UnControlledRating/>*/}
+            <UnControlledRating/>
             {/*<Accordion  titleValue="User" collapsed={collapsed} callBack={setCollapsed}/>*/}
             {/*<UnControlledAccordion  titleValue="Меню" />*/}
             {/*<OnOff status={switchOn} callback={SetSwitchOn}/>{switchOn.toString()}*/}
@@ -39,7 +39,7 @@ export function App() {
            {/* <MySelect />*/}
            {/* <ReactMemo />*/}
            {/* <UseMemoHelpToReactMemo />*/}
-            <BookCallBack />
+           {/* <BookCallBack />*/}
         </div>
     );
 }
