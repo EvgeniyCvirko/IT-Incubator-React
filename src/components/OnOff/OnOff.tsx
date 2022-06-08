@@ -6,7 +6,7 @@ export type OnOffType = {
 }
 
 export const OnOff = (props:OnOffType) => {
-
+    console.log('OnOf')
     const onStyle = {
         width: "30px",
         height: "20px",

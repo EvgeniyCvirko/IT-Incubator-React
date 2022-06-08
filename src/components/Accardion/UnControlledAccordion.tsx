@@ -1,35 +1,35 @@
-import React, { useState} from "react";
+import React, {useState} from "react";
 
 type AccordionType = {
     titleValue: string
 
 }
 
-export const UnControlledAccordion = (props:AccordionType) => {
-const [collapsed , setCollapsed] = useState<boolean>(true)
+export const UnControlledAccordionMemo = (props: AccordionType) => {
+    console.log("UnControlledAccordion")
+    const [collapsed, setCollapsed] = useState<boolean>(true)
     const accordionHandler = () => {
         collapsed ? setCollapsed(false) : setCollapsed(true)
     }
-    return (<div >
+    return (<div>
         <AccordionTitle title={props.titleValue} callBack={accordionHandler}/>
-        { collapsed &&  <AccordionBody/>}
+        {collapsed && <AccordionBody/>}
     </div>)
 
 }
 
-type AccordionTitleType ={
+type AccordionTitleType = {
     title: string
-    callBack: ()=>void
+    callBack: () => void
 }
-export const AccordionTitle = (props:AccordionTitleType) => {
+export const AccordionTitle = (props: AccordionTitleType) => {
     return (<div>
         <h3 onClick={props.callBack}>{props.title}</h3>
     </div>)
 }
 
-type AccordionBody ={
-}
-export const AccordionBody = (props:AccordionBody) => {
+type AccordionBody = {}
+export const AccordionBody = (props: AccordionBody) => {
 
     return (<div>
         <ul>

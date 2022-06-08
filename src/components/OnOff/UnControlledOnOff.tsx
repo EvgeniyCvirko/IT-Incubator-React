@@ -1,10 +1,10 @@
 import React, { useState} from "react";
 
 type UncontrolledOnOffType = {
-    callback:(value: boolean) => void
 }
 
-export const UnControlledOnOff = (props:UncontrolledOnOffType) => {
+export const OnOffMemo = (props:UncontrolledOnOffType) => {
+    console.log("UNControled")
     let [on, SetOn] = useState<boolean>(false)
     const onStyle = {
         width: "30px",
@@ -35,11 +35,9 @@ export const UnControlledOnOff = (props:UncontrolledOnOffType) => {
 
     const onHandler = () =>{
        SetOn(true)
-        props.callback(true)
     }
     const offHandler = () =>{
        SetOn(false)
-        props.callback(false)
     }
 
     return (<div>

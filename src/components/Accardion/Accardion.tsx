@@ -8,6 +8,7 @@ type AccordionType = {
 let items = ['Eugeniy', 'Sasha', 'Dima', 'Anton', 'Igor']
 
 export const Accordion = (props: AccordionType) => {
+    console.log("Accordion")
     const accordionHandler = () => {
         props.collapsed ? props.callBack(false): props.callBack(true)
     }

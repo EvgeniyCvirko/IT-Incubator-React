@@ -3,9 +3,9 @@ import './App.css';
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {Accordion} from "./components/Accardion/Accardion";
 import {OnOff} from "./components/OnOff/OnOff";
-import {UnControlledAccordion} from "./components/Accardion/UnControlledAccordion";
+import { UnControlledAccordionMemo} from "./components/Accardion/UnControlledAccordion";
 import {UnControlledRating} from "./components/Rating/UnControlledReting";
-import {UnControlledOnOff} from "./components/OnOff/UnControlledOnOff";
+import {OnOffMemo} from "./components/OnOff/UnControlledOnOff";
 import {UnControlledInput} from "./components/Input/UncontrolledInput";
 import {ControlledInput} from "./components/Input/Input";
 import {ControlledCheckbox} from "./components/Checkbox/ControlledCheckbox";
@@ -27,11 +27,11 @@ export function App() {
     return (
         <div className = 'App'>
             {/*<Rating value={ratingValue} callBack={setRatingValue}/>*/}
-            <UnControlledRating/>
-            {/*<Accordion  titleValue="User" collapsed={collapsed} callBack={setCollapsed}/>*/}
-            {/*<UnControlledAccordion  titleValue="Меню" />*/}
+            {/*<UnControlledRating/>*/}
+            <Accordion  titleValue="User" collapsed={collapsed} callBack={setCollapsed}/>
+            <UnControlledAccordion  titleValue="Меню" />
             {/*<OnOff status={switchOn} callback={SetSwitchOn}/>{switchOn.toString()}*/}
-            {/*<UnControlledOnOff callback={SetSwitchOn}/>{switchOn.toString()}*/}
+            {/*<UnControlledOnOff />{switchOn.toString()}*/}
            {/* <UnControlledInput />*/}
            {/* <ControlledInput value={valueInput} callback={setValueInput}/>*/}
            {/* <ControlledCheckbox value={valueCheckbox} callback={setValueCheckbox} />*/}
@@ -44,3 +44,5 @@ export function App() {
     );
 }
 
+ const UnControlledOnOff = React.memo(OnOffMemo)
+ const UnControlledAccordion = React.memo(UnControlledAccordionMemo)
