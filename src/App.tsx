@@ -14,6 +14,7 @@ import {MySelect} from "./components/Select/MySelect";
 import { UseMemoHelpToReactMemo} from "./components/UseMemo/UseMemo";
 import {ReactMemo} from "./components/UseMemo/ReactMemo";
 import {BookCallBack} from "./components/UseMemo/UseCallback";
+import {UseStateExample1, UseStateExample2} from "./components/UseState/UseState";
 
 
 export function App() {
@@ -32,14 +33,16 @@ export function App() {
             {/*<UnControlledAccordion  titleValue="Меню" />*/}
             {/*<OnOff status={switchOn} callback={SetSwitchOn}/>{switchOn.toString()}*/}
             {/*<UnControlledOnOff />{switchOn.toString()}*/}
-            <UnControlledInput />
-            <ControlledInput value={valueInput} callback={setValueInput}/>
+            {/*<UnControlledInput />*/}
+            {/*<ControlledInput value={valueInput} callback={setValueInput}/>*/}
            {/* <ControlledCheckbox value={valueCheckbox} callback={setValueCheckbox} />*/}
            {/* <ControlledSelect value={valueSelect} callback={setValueSelect}/>*/}
            {/* <MySelect />*/}
            {/* <ReactMemo />*/}
            {/* <UseMemoHelpToReactMemo />*/}
            {/* <BookCallBack />*/}
+            <UseStateExample1/>
+            {/*<UseStateExample2/>*/}
         </div>
     );
 }
