@@ -20,8 +20,8 @@ export const UseEffectSimple = () =>{
     },[counter])
 
     return <div>
-        <button onClick={() => setCounter(counter + 1)}>+</button>{counter}
-        <button onClick={() => setFake(fake + 1)}>+</button>{fake}
+        <button onClick={() => setCounter(counter + 1)}>counter +</button>{counter}
+        <button onClick={() => setFake(fake + 1)}>fake +</button>{fake}
 
     </div>
 }

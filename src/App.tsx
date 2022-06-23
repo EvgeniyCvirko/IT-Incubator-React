@@ -16,6 +16,7 @@ import {ReactMemo} from "./components/UseMemo/ReactMemo";
 import {BookCallBack} from "./components/UseMemo/UseCallback";
 import {UseStateExample1, UseStateExample2} from "./components/UseState/UseState";
 import {UseEffectSimple} from "./components/UseEffect/UseEffect";
+import {UseEffectSetTimeOut} from "./components/UseEffect/UseEffectSetTimeOut";
 
 
 export function App() {
@@ -44,7 +45,8 @@ export function App() {
            {/* <BookCallBack />*/}
            {/* <UseStateExample1/>*/}
            {/* <UseStateExample2/>*/}
-            <UseEffectSimple/>
+           {/* <UseEffectSimple/>*/}
+            <UseEffectSetTimeOut/>
         </div>
     );
 }
