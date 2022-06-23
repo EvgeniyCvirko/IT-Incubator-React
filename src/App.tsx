@@ -41,8 +41,8 @@ export function App() {
            {/* <ReactMemo />*/}
            {/* <UseMemoHelpToReactMemo />*/}
            {/* <BookCallBack />*/}
-            <UseStateExample1/>
-            {/*<UseStateExample2/>*/}
+           {/* <UseStateExample1/>*/}
+            <UseStateExample2/>
         </div>
     );
 }

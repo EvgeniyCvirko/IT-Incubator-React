@@ -17,3 +17,15 @@ export const UseStateExample1 = () =>{
         {counter}</div>
 }
 
+export const UseStateExample2 = () =>{
+    console.log('Example1')
+    // let abc = generationData()
+    // const [counter, setCounter] = useState <number> (abc)
+    const [counter, setCounter] = useState <number> (generationData)
+    const changer = (state:number) => {
+        return state + 2
+    }
+    return <div>
+        <button onClick={() => setCounter(changer)}>+</button>
+        {counter}</div>
+}
