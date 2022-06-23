@@ -8,12 +8,15 @@ export const UseEffectSimple = () =>{
 
     useEffect (() =>{
         console.log('render always')
+        // document.title = counter.toString()
     })
     useEffect (() =>{
         console.log('render only the first time')
+        document.title = counter.toString()
     },[])
     useEffect (() =>{
         console.log('render only counter change')
+        document.title = counter.toString()
     },[counter])
 
     return <div>
