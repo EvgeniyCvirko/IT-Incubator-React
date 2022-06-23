@@ -15,6 +15,7 @@ import { UseMemoHelpToReactMemo} from "./components/UseMemo/UseMemo";
 import {ReactMemo} from "./components/UseMemo/ReactMemo";
 import {BookCallBack} from "./components/UseMemo/UseCallback";
 import {UseStateExample1, UseStateExample2} from "./components/UseState/UseState";
+import {UseEffectSimple} from "./components/UseEffect/UseEffect";
 
 
 export function App() {
@@ -42,7 +43,8 @@ export function App() {
            {/* <UseMemoHelpToReactMemo />*/}
            {/* <BookCallBack />*/}
            {/* <UseStateExample1/>*/}
-            <UseStateExample2/>
+           {/* <UseStateExample2/>*/}
+            <UseEffectSimple/>
         </div>
     );
 }
