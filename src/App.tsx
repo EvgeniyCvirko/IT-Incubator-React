@@ -17,7 +17,7 @@ import {BookCallBack} from "./components/UseMemo/UseCallback";
 import {UseStateExample1, UseStateExample2} from "./components/UseState/UseState";
 import {UseEffectSimple} from "./components/UseEffect/UseEffect";
 import {UseEffectSetTimeOut} from "./components/UseEffect/UseEffectSetTimeOut";
-import {Clock} from "./components/UseEffect/Clock";
+import {Clock} from "./components/UseEffect/Clock/Clock";
 
 
 export function App() {

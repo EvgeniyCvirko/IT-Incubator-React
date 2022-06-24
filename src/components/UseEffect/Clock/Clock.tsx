@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from "react";
+import {DigitalClock} from "./DigitalClock";
+import {AnalogClock} from "./AnalogClock";
 
 
 export const Clock = () =>{
     const [date, setDate] = useState<Date>(new Date())
 
-    const twoDigitsClock = (number: number) => number < 10 ? "0" + number : number
+    const twoDigitsClock = (number: number) => number < 10 ? "0" + number.toString() : number.toString()
 
     useEffect (() =>{
 
@@ -13,16 +15,15 @@ export const Clock = () =>{
             setDate(new Date())
         },1000)
         return () => {
-           debugger
             clearInterval(intervalId)
         }
     },[])
 
-    const seconds = twoDigitsClock(date.getSeconds())
-    const minutes = twoDigitsClock(date.getMinutes())
-    const hour = twoDigitsClock(date.getHours())
-
     return <div>
-        {hour} : {minutes} : {seconds}
+       {/* <DigitalClock date={date}
+                      twoDigitsClock={twoDigitsClock} />*/}
+        <AnalogClock date={date}
+                     twoDigitsClock={twoDigitsClock}/>
+
     </div>
 }
